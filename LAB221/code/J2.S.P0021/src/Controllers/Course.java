@@ -1,3 +1,5 @@
+package Controllers;
+
 
 public class Course {
 
@@ -37,6 +39,10 @@ public class Course {
     public void setCredit(int credit) {
         this.credit = credit;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return this.code + " | " + this.name + " | " + this.credit;
+    }
+
 }

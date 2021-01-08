@@ -82,6 +82,7 @@ public class control implements ActionListener {
         });
         JButton btnne = g.getBtnnega();
         btnne.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pressNegate();
             }

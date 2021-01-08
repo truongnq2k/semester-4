@@ -1,6 +1,7 @@
 package Controllers;
 
 import UI.*;
+import java.util.ArrayList;
 
 public class MenuGUIController {
 
@@ -9,7 +10,7 @@ public class MenuGUIController {
     private final ListCourse l;
     private final SearchCourse s;
 
-    public MenuGUIController(MenuGUI m, AddCourse a, ListCourse l, SearchCourse s) {
+    public MenuGUIController(MenuGUI m, AddCourse a, ListCourse l, SearchCourse s, ArrayList<Course> listCourses) {
 
         this.m = m;
         this.a = a;
@@ -36,6 +37,8 @@ public class MenuGUIController {
         m.getBtnExit().addActionListener((java.awt.event.ActionEvent evt) -> {
             System.exit(0);
         });
+
+        AddCourseController addCourse = new AddCourseController(a, listCourses);
 
     }
 }
