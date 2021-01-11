@@ -68,6 +68,7 @@ public class ListCourse extends javax.swing.JFrame {
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTitle.setText("List of all courses (order by Credit)");
 
+        taListAll.setEditable(false);
         taListAll.setColumns(20);
         taListAll.setRows(5);
         jScrollPane1.setViewportView(taListAll);

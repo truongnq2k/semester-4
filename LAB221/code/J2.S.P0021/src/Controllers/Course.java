@@ -42,7 +42,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return this.code + " | " + this.name + " | " + this.credit;
+        return this.code + " | " + this.name + " | " + this.credit + "\n";
     }
 
 }

@@ -25,6 +25,7 @@ public class MenuGUIController {
 
         //Call List Course
         m.getBtnDisplay().addActionListener((java.awt.event.ActionEvent evt) -> {
+            ListCourseController listCourse = new ListCourseController(l, listCourses);
             l.setVisible(true);
         });
 
