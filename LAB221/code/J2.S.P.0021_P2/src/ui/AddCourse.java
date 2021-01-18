@@ -1,24 +1,82 @@
 package ui;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
-/**
- *
- * @author hacken006
- */
-public class AddCourse extends javax.swing.JFrame {
-
-    /**
-     * Creates new form AddCourse
-     */
-    public AddCourse() {
+public class AddCourse extends javax.swing.JDialog {
+    
+    public AddCourse(java.awt.Frame parent, boolean model) {
+        super(parent, model);
         initComponents();
     }
 
+    public JButton getBtnAdd() {
+        return btnAdd;
+    }
+
+    public void setBtnAdd(JButton btnAdd) {
+        this.btnAdd = btnAdd;
+    }
+
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JLabel getLbCode() {
+        return lbCode;
+    }
+
+    public void setLbCode(JLabel lbCode) {
+        this.lbCode = lbCode;
+    }
+
+    public JLabel getLbCredit() {
+        return lbCredit;
+    }
+
+    public void setLbCredit(JLabel lbCredit) {
+        this.lbCredit = lbCredit;
+    }
+
+    public JLabel getLbName() {
+        return lbName;
+    }
+
+    public void setLbName(JLabel lbName) {
+        this.lbName = lbName;
+    }
+
+    public JTextField getTfCode() {
+        return tfCode;
+    }
+
+    public void setTfCode(JTextField tfCode) {
+        this.tfCode = tfCode;
+    }
+
+    public JTextField getTfCredit() {
+        return tfCredit;
+    }
+
+    public void setTfCredit(JTextField tfCredit) {
+        this.tfCredit = tfCredit;
+    }
+
+    public JTextField getTfName() {
+        return tfName;
+    }
+
+    public void setTfName(JTextField tfName) {
+        this.tfName = tfName;
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,17 +86,69 @@ public class AddCourse extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        lbCode = new javax.swing.JLabel();
+        lbName = new javax.swing.JLabel();
+        lbCredit = new javax.swing.JLabel();
+        tfCode = new javax.swing.JTextField();
+        tfCredit = new javax.swing.JTextField();
+        tfName = new javax.swing.JTextField();
+        btnAdd = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
+
+        lbCode.setText("Code");
+
+        lbName.setText("Name");
+
+        lbCredit.setText("Credit");
+
+        btnAdd.setText("Add");
+
+        btnClear.setText("Clear");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnAdd)
+                        .addGap(37, 37, 37)
+                        .addComponent(btnClear))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbCode)
+                            .addComponent(lbCredit)
+                            .addComponent(lbName))
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfCode, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfCredit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbCode)
+                    .addComponent(tfCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbName)
+                    .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbCredit)
+                    .addComponent(tfCredit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAdd)
+                    .addComponent(btnClear))
+                .addGap(35, 35, 35))
         );
 
         pack();
@@ -74,11 +184,20 @@ public class AddCourse extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddCourse().setVisible(true);
+                AddCourse dialogAddCourse = new AddCourse(new java.awt.Frame(), true);
+                dialogAddCourse.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JLabel lbCode;
+    private javax.swing.JLabel lbCredit;
+    private javax.swing.JLabel lbName;
+    private javax.swing.JTextField tfCode;
+    private javax.swing.JTextField tfCredit;
+    private javax.swing.JTextField tfName;
     // End of variables declaration//GEN-END:variables
 }

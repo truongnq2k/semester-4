@@ -5,19 +5,49 @@
  */
 package ui;
 
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author hacken006
  */
-public class ListCourse extends javax.swing.JFrame {
+public class ListCourse extends javax.swing.JDialog {
 
-    /**
-     * Creates new form ListCourse
-     */
-    public ListCourse() {
+    public ListCourse(java.awt.Frame parent, boolean model) {
+        super(parent, model);
         initComponents();
     }
 
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JLabel getLbTitle() {
+        return lbTitle;
+    }
+
+    public void setLbTitle(JLabel lbTitle) {
+        this.lbTitle = lbTitle;
+    }
+
+    public JTextArea getTaList() {
+        return taList;
+    }
+
+    public void setTaList(JTextArea taList) {
+        this.taList = taList;
+    }
+
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,17 +57,37 @@ public class ListCourse extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        lbTitle = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        taList = new javax.swing.JTextArea();
+
+        lbTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTitle.setText("List All Course (Order by Credit)");
+
+        taList.setEditable(false);
+        taList.setColumns(20);
+        taList.setRows(5);
+        jScrollPane2.setViewportView(taList);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(lbTitle)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -73,11 +123,15 @@ public class ListCourse extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListCourse().setVisible(true);
+                ListCourse dialog = new ListCourse(new java.awt.Frame(), true);
+                dialog.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbTitle;
+    private javax.swing.JTextArea taList;
     // End of variables declaration//GEN-END:variables
 }
