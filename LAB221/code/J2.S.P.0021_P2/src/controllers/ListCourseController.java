@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import model.Course;
 import java.util.ArrayList;
 import java.util.Collections;
 import ui.ListCourse;

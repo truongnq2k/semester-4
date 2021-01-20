@@ -382,16 +382,16 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        BtnMC.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        BtnMC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         BtnMC.setText("MC");
 
-        btnMr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnMr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnMr.setText("MR");
 
-        btnMa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnMa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnMa.setText("M+");
 
-        btnMs.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnMs.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnMs.setText("M-");
 
         btnsqrt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -489,7 +489,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(btnMa, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMs, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnsqrt, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)

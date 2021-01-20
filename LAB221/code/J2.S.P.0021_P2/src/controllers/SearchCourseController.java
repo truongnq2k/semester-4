@@ -1,5 +1,6 @@
 package controllers;
 
+import model.Course;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import ui.SearchCourse;

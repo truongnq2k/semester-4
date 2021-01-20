@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package validate;
 
+import model.Course;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,7 +14,7 @@ import java.util.regex.Pattern;
  *
  * @author hacken006
  */
-public class Validate {
+public class Validation {
 
     //check code existed or not
     public boolean isExisted(String code, ArrayList<Course> lc) {
@@ -62,7 +63,9 @@ public class Validate {
         while (matcher.find()) {
             matcher.appendReplacement(result, matcher.group().toUpperCase());
         }
-        return matcher.appendTail(result).toString();
+        String nameFinal = matcher.appendTail(result).toString();
+        nameFinal = nameFinal.replaceAll("And ", "and ");
+        return nameFinal;
     }
 
 }

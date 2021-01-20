@@ -1,5 +1,7 @@
 package controllers;
 
+import model.Course;
+import validate.Validation;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import ui.AddCourse;
@@ -10,7 +12,7 @@ import ui.AddCourse;
  */
 public class AddCourseController {
 
-    Validate v = new Validate();
+    Validation v = new Validation();
     private final AddCourse a;
 
     public AddCourseController(AddCourse a, ArrayList<Course> lc) {

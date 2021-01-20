@@ -1,5 +1,5 @@
 
-import controllers.Course;
+import model.Course;
 import controllers.CourseManagementController;
 import java.util.ArrayList;
 import ui.AddCourse;
